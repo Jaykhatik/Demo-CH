@@ -50,11 +50,24 @@ function Footer() {
                                 <p>Follow us on social media to stay updated on offers, events & new arrivals.</p>
 
                                 <div className="tm-social-icons-container">
-                                    <Link to="/facebook" className="tm-social-icon"><i className="fa fa-facebook" /></Link>
-                                    <Link to="/insta" className="tm-social-icon"><i className="fa fa-instagram" /></Link>
-                                    <Link to="/twitter" className="tm-social-icon"><i className="fa fa-twitter" /></Link>
-                                    <Link to="/youtube" className="tm-social-icon"><i className="fa fa-youtube" /></Link>
-                                    <Link to="/marker" className="tm-social-icon"><i className="fa fa-map-marker" /></Link>
+                                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="tm-social-icon">
+                                        <i className="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="tm-social-icon">
+                                        <i className="fa fa-instagram"></i>
+                                    </a>
+
+                                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="tm-social-icon">
+                                        <i className="fa fa-twitter"></i>
+                                    </a>
+
+                                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="tm-social-icon">
+                                        <i className="fa fa-youtube"></i>
+                                    </a>
+
+                                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="tm-social-icon">
+                                        <i className="fa fa-map-marker"></i>
+                                    </a>
                                 </div>
                             </div>
 
