@@ -291,7 +291,10 @@ ul {
 }
 
 @media (max-width: 768px) {
-
+.tm-top-header {
+    position: relative;
+    z-index: 10;
+  }
   .tm-top-header-inner {
     flex-wrap: wrap;
     align-items: center;
@@ -312,9 +315,9 @@ ul {
     font-size: 22px;
     color: #c79c60;
     cursor: pointer;
-    z-index: 2000;
+    z-index: 7000;
     position: relative;
-    padding: 8px;
+    padding: 12px;
   }
 
   /* MENU */
@@ -323,6 +326,7 @@ ul {
     display: none;
     margin-top: 15px;
     z-index: 1000;
+    position: relative;
   }
 
   .tm-nav.open {
@@ -337,16 +341,20 @@ ul {
 
   .tm-nav li {
     text-align: center;
+    float: none;
   }
 
   .tm-nav li a {
-    padding: 14px 0;
+    padding: 18px 0;
     display: block;
   }
 
   /* 🔥 REMOVE DESKTOP ACTIVE BACKGROUND */
   .tm-nav li a.active {
-    background: none !important;
+    background-image: url(../img/logo.png), url(../img/nav-underline.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 16px, 60px 14px; /* 👈 smaller */
+    background-position: 10% center, center bottom;
   }
 }
 
