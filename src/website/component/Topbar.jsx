@@ -35,9 +35,13 @@ function Topbar() {
         </div>
 
         <div className="tm-topbar-right">
-          <NavLink to="/cart" className="tm-topbar-icon">
+          <NavLink
+            to="/cart"
+            className={({ isActive }) =>
+              `tm-topbar-icon ${isActive ? "active-link" : ""}`
+            }
+          >
             <i className="fa fa-shopping-cart"></i>
-
             {totalItems > 0 && (
               <span className="tm-cart-badge">{totalItems}</span>
             )}
@@ -45,14 +49,26 @@ function Topbar() {
 
 
 
+
           {isLoggedIn && (
-            <NavLink to="/profile" className="tm-topbar-icon">
+            <NavLink
+              to="/profile"
+              end={false}
+              className={({ isActive }) =>
+                `tm-topbar-icon ${isActive ? "active-link" : ""}`
+              }
+            >
               <i className="fa fa-user"></i>
             </NavLink>
           )}
 
 
-          <NavLink to="/wishlist" className="tm-topbar-icon">
+          <NavLink
+            to="/wishlist"
+            className={({ isActive }) =>
+              `tm-topbar-icon ${isActive ? "active-link" : ""}`
+            }
+          >
             ❤️
             {wishlist.length > 0 && (
               <span className="tm-cart-badge">{wishlist.length}</span>

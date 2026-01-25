@@ -1,26 +1,25 @@
-import { Link } from 'lucide-react'
+
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function Footer() {
     return (
         <>
             <div>
 
-                <div className="tm-black-bg">
+                <div className="footer-bg">
                     <div className="container">
-
                         <div className="row margin-bottom-60">
-
                             {/* MAIN MENU */}
                             <nav className="col-lg-3 col-md-3 tm-footer-nav tm-footer-div">
                                 <h3 className="tm-footer-div-title">Quick Links</h3>
                                 <ul>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li><Link to="/menu">Our Menu</Link></li>
-                                    <li><Link to="/specals">Specials</Link></li>
-                                    <li><Link to="/gallery">Gallery</Link></li>
-                                    <li><Link to="/contact">Contact Us</Link></li>
+                                    <li><NavLink to="/">Home</NavLink></li>
+                                    <li><NavLink to="/about">About</NavLink></li>
+                                     <li><NavLink to="/menu">Our Menu</NavLink></li>
+                                    <li><NavLink to="/contact">Contact Us</NavLink></li>
                                 </ul>
+
                             </nav>
 
                             {/* ABOUT CAFE */}

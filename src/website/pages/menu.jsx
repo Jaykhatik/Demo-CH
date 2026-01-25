@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { useCart } from "../../context/cartcontext";
 import { useWishlist } from "../../context/WhishlistContext";
-import { Link } from "lucide-react";
+import { Link } from "react-router-dom";
 
 
 

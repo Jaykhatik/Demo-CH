@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { NavLink } from 'react-router-dom';
-import { Link } from 'lucide-react';
+import { Link, NavLink } from 'react-router-dom';
 
 function Index() {
     const [popularItems, setPopularItems] = useState([]);
