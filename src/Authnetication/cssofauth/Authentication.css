@@ -1,0 +1,267 @@
+.cafe-auth-page {
+  min-height: 100vh;
+  background: #faf7f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+.cafe-back-home {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  color: #e6cfa7;
+  text-decoration: none;
+  display: flex;
+  gap: 6px;
+}
+
+.cafe-auth-card {
+  width: 880px;
+  max-width: 95%;
+  display: flex;
+  background: #111;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  min-height: 540px;
+  max-height: max-content;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* LEFT */
+.cafe-auth-left {
+  width: 45%;
+  background: linear-gradient(135deg, #6f4e37, #3e2723);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+.cafe-auth-left h1 {
+  font-size: 32px;
+  margin-top: 6px;
+}
+
+.cafe-auth-left p {
+  opacity: 0.9;
+}
+
+/* RIGHT */
+.cafe-auth-right {
+  width: 55%;
+  padding: 50px;
+}
+
+.cafe-auth-right h2 {
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+
+.cafe-input {
+  display: flex;
+  align-items: center;
+  background: #1f1f1f;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+}
+
+.cafe-input input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.cafe-input span {
+  cursor: pointer;
+}
+
+.cafe-auth-right button {
+  width: 100%;
+  background: linear-gradient(135deg, #c89b3c, #8b5a2b);
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cafe-toggle {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.cafe-toggle span {
+  color: #c89b3c;
+  cursor: pointer;
+}
+
+.cafe-auth-desc {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.cafe-auth-features {
+  margin: 15px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.cafe-auth-features li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.cafe-auth-note {
+  margin-top: 1px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.cafe-auth-footer {
+  margin-top: auto;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.cafe-auth-subtitle {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.cafe-forgot,
+.cafe-terms {
+  font-size: 12px;
+  margin: 8px 0;
+  opacity: 0.8;
+}
+
+/* ==== Animated Illustration ==== */
+.cafe-auth-illustration {
+  width: 70px;
+
+  align-self: flex-start;
+  /* 👈 MOVE TO LEFT */
+  margin-left: -10px;
+  /* 👈 slight artistic offset */
+
+  animation: floatCoffee 3s ease-in-out infinite;
+  filter: drop-shadow(0 10px 0px rgba(0, 0, 0, 0.35));
+}
+
+@keyframes floatCoffee {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ==== Forgot Links ==== */
+.cafe-forgot-links {
+  display: flex;
+  gap: 6px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.cafe-forgot-links a {
+  color: #c89b3c;
+  text-decoration: none;
+}
+
+.cafe-forgot-links span {
+  opacity: 0.6;
+}
+
+/* ==== Divider ==== */
+.cafe-divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.cafe-divider span {
+  background: #111;
+  padding: 0 12px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* ==== Social Buttons ==== */
+.cafe-social-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cafe-social-buttons button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.cafe-social-buttons button:hover {
+  opacity: 0.9;
+}
+
+.auth-warning {
+  background: #fff3cd;
+  color: #856404;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  text-align: center;
+}
+.admin-login-note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: whitesmoke;
+  background: transparent;
+  box-shadow: 0px 0px 6px whitesmoke;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.admin-login-note span {
+  font-weight: 600;
+  color: whitesmoke;
+}
+
+.admin-login-note hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px dashed #ccc;
+}
+
+.admin-route-note {
+  font-size: 13px;
+  color: #a05a00;
+}

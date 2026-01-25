@@ -1,0 +1,277 @@
+/* ===============================
+   CONTAINER
+================================ */
+.category-container {
+  padding: 25px;
+}
+
+/* ===============================
+   HEADER (FLEX WORKS PERFECTLY)
+================================ */
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.category-header h4 {
+  color: #b68c55;
+  margin: 0;
+  text-decoration: underline;
+  text-shadow: 0px 5px 5px #b68c55;
+}
+
+/* ===============================
+   ADD CATEGORY BUTTON
+================================ */
+.add-category-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #b68c55;
+  padding: 10px 22px;
+  color: #000;
+  border-radius: 15px;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 0 15px rgba(182, 140, 85, 0.6);
+  transition: 0.25s ease;
+}
+
+.add-category-btn:hover {
+  background: #2e1f1a;
+  color: #b68c55;
+}
+
+/* ===============================
+   CATEGORY CARD
+================================ */
+.category-card {
+  background: #000;
+  padding: 25px;
+  border-radius: 20px;
+  border: 2px solid #c1975b;
+  position: relative;
+  transition: 0.25s ease;
+  height: 100%;
+}
+
+.category-card:hover {
+  border-color: #b68c55;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 15px rgba(31, 24, 18, 0.8);
+}
+
+.category-card h5 {
+  color: #b68c55;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.category-card p {
+  color: #d2c8ba;
+  margin-bottom: 0;
+}
+
+/* ===============================
+   CATEGORY ICON
+================================ */
+.cat-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
+}
+
+.bg-coffee { background: #8c5a28; }
+.bg-teal   { background: #006d77; }
+.bg-green  { background: #2d6a4f; }
+.bg-blue   { background: #118ab2; }
+
+/* ===============================
+   CARD ACTION ICONS
+================================ */
+.cat-actions {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.cat-actions i {
+  color: #b68c55;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cat-actions i:hover {
+  color: #ff7276;
+  transform: scale(1.15);
+}
+/* model */
+/* ================= MODAL OVERLAY ================= */
+.modal-overlay-categorypage {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 15px;
+}
+
+/* ================= MODAL CARD ================= */
+.modal-card-categorypage {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  padding: 26px 28px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+  animation: modalSlide 0.3s ease;
+}
+/* ================= ANIMATION ================= */
+@keyframes modalSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ================= MODAL TITLE ================= */
+.modal-card-categorypage h3 {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #c79c60; /* same as order page accent */
+  background-color: #000;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* ================= INPUT FIELDS ================= */
+.modal-card-categorypage input {
+  width: 100%;
+  padding: 11px 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+.modal-card-categorypage input:focus {
+  outline: none;
+  border-color: #c79c60;
+  box-shadow: 0 0 0 2px rgba(199, 156, 96, 0.15);
+}
+
+/* ================= PLACEHOLDER ================= */
+.modal-card-categorypage input::placeholder {
+  color: #999;
+}
+/* ================= MODAL ACTIONS ================= */
+.modal-actions-categorypage {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* ================= BUTTONS ================= */
+.modal-actions-categorypage button {
+  padding: 9px 18px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+/* CANCEL BUTTON */
+.modal-actions-categorypage button:first-child {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.modal-actions-categorypage button:first-child:hover {
+  background: #e2e2e2;
+  transform: translateY(-2px);
+}
+
+/* ADD / UPDATE BUTTON */
+.modal-actions-categorypage button:last-child {
+  background: #198754;
+  color: #fff;
+}
+
+.modal-actions-categorypage button:last-child:hover {
+  background: #157347;
+  transform: translateY(-2px);
+}
+/* ================= FORM GROUP ================= */
+.admin-form-group-categorypage {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ================= LABEL ================= */
+.admin-form-group-categorypage label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #c1975b;
+}
+
+/* ================= INPUT ================= */
+.admin-form-group-categorypage input {
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.admin-form-group-categorypage input::placeholder {
+  color: #aaa;
+}
+
+.admin-form-group-categorypage input:focus {
+  outline: none;
+  border-color: #c79c60;
+  box-shadow: 0 0 0 2px rgba(199, 156, 96, 0.15);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+  .modal-card-categorypage {
+    padding: 22px;
+  }
+
+  .modal-card-categorypage h3 {
+    font-size: 20px;
+  }
+
+  .modal-card-categorypage input {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .modal-actions-categorypage button {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}
+
+
+
+

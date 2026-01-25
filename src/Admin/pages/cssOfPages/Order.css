@@ -1,0 +1,414 @@
+
+/* -------------------------  
+   ORDERS PAGE (Cafe Palette)
+----------------------------*/
+
+/* Container */
+.orders-container {
+  background: #000;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Search Bar */
+.orders-search {
+  background: #2b211a;
+  border: 1px solid #b68c55;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  gap: 10px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.orders-search i {
+  font-size: 18px;
+  color: #c1975b;
+}
+
+.orders-search input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  caret-color: #c1975b;
+}
+
+/* On Focus Effect */
+.orders-search:focus-within {
+  border-color: #d8b17a;
+  box-shadow: 0 0 10px rgba(193, 151, 91, 0.4);
+}
+
+/* Tabs */
+.order-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.order-tabs .tab {
+  background: #2b211a;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 1px solid #b68c55;
+  color: #e5c59a;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.order-tabs .tab:hover {
+  background: #4a3b30;
+}
+
+.order-tabs .tab.active {
+  background: #c1975b;
+  color: #fff;
+  font-weight: 600;
+  border-color: #d7b482;
+}
+
+/* Table */
+.orders-table {
+  background: #2b211a;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #b68c55;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #1f1812;
+}
+
+thead th {
+  padding: 14px 18px;
+  font-size: 13px;
+  color: #c1975b;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+tbody td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #5e4d3f;
+}
+
+tbody tr {
+  transition: 0.2s;
+}
+
+tbody tr:hover {
+  background: #4a3b30;
+}
+
+/* Order ID */
+.id {
+  color: #c1975b;
+  font-weight: 700;
+}
+
+/* Customer Name */
+.bold {
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Table Number Badge */
+.tag {
+  padding: 5px 10px;
+  border-radius: 16px;
+  border: 1px solid #c1975b;
+  color: #c1975b;
+  font-size: 12px;
+}
+
+/* STATUS BADGES */
+.status {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* STATUS COLORS */
+.pending {
+  background: rgba(208, 125, 40, 0.25);
+  color: #d07d28;
+}
+
+.progress {
+  background: rgba(24, 141, 138, 0.25);
+  color: #188d8a;
+}
+
+.completed {
+  background: rgba(31, 143, 71, 0.25);
+  color: #1f8f47;
+}
+
+.cancelled {
+  background: rgba(199, 74, 67, 0.25);
+  color: #c74a43;
+}
+
+/* Action Icon */
+.action {
+  font-size: 20px;
+  cursor: pointer;
+  color: #c1975b;
+  transition: 0.2s;
+}
+
+.action:hover {
+  transform: scale(1.2);
+  color: #eacaa4;
+}
+
+
+/* model */
+/* ================= MODAL OVERLAY ================= */
+.modal-overlay-orderpage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* ================= MODAL CONTENT ================= */
+.modal-content-orderpage {
+  background-color: #fff;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 100%;
+  padding: 25px 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease-out;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ================= MODAL HEADER ================= */
+.modal-content-orderpage h3 {
+  font-size: 22px;
+  color: #c79c60;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 600;
+  background-color: #000;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* ================= CUSTOMER & ORDER INFO ================= */
+.modal-content-orderpage p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.modal-content-orderpage h4 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #c79c60;
+}
+
+/* ================= SELECT DROPDOWN ================= */
+.modal-content-orderpage select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: all 0.3s;
+  margin-left: 10px;
+}
+
+.modal-content-orderpage select:focus {
+  border-color: #c79c60;
+  outline: none;
+}
+
+/* ================= MODAL ACTIONS ================= */
+.modal-actions-orderpage {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-actions-orderpage button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-actions-orderpage button:hover {
+  transform: translateY(-2px);
+}
+
+/* Update button style */
+.modal-actions-orderpage button:first-child {
+  background-color: #c79c60;
+  color: #fff;
+  border: none;
+}
+
+.modal-actions-orderpage button:first-child:hover {
+  background-color: #b68c55;
+}
+
+/* Close button style */
+.modal-actions-orderpage button:last-child {
+  background-color: #eee;
+  color: #333;
+  border: none;
+}
+
+.modal-actions-orderpage button:last-child:hover {
+  background-color: #ddd;
+}
+
+/* ================= ITEMS LIST ================= */
+.modal-content-orderpage .items-list {
+  margin-top: 10px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-content-orderpage .items-list p {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  border-bottom: 1px dashed #ddd;
+}
+
+.modal-content-orderpage .items-list p:last-child {
+  border-bottom: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .modal-content-orderpage {
+    padding: 20px;
+  }
+
+  .modal-content-orderpage h3 {
+    font-size: 20px;
+  }
+
+  .modal-content-orderpage h4 {
+    font-size: 15px;
+  }
+
+  .modal-content-orderpage p {
+    font-size: 14px;
+  }
+
+  .modal-actions-orderpage button {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content-orderpage {
+    padding: 15px 15px;
+  }
+
+  .modal-content-orderpage h3 {
+    font-size: 18px;
+  }
+
+  .modal-content-orderpage h4 {
+    font-size: 14px;
+  }
+
+  .modal-content-orderpage p {
+    font-size: 13px;
+  }
+}
+/* ================= ORDER ITEMS ================= */
+.order-items-orderpage {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.order-item-card-orderpage {
+  display: flex;
+  gap: 15px;
+  padding: 12px;
+  background-color: #faf7f2;
+  border-radius: 12px;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.order-item-card-orderpage img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.order-item-info-orderpage h5 {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.order-item-info-orderpage p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+  .order-item-card-orderpage {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-item-card-orderpage img {
+    width: 100%;
+    height: 140px;
+  }
+}

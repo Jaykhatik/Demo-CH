@@ -1,0 +1,444 @@
+{
+  "admin": [
+    {
+      "email": "admin@cafehouse.com",
+      "password": "admin123",
+      "id": "19aa"
+    }
+  ],
+  "menuItems": [
+    {
+      "id": "ITEM_1768653218644",
+      "name": "Cold Brew",
+      "categoryId": "CAT_1768653111431",
+      "ingredients": "chocolate,milk,ice",
+      "description": "best",
+      "price": 199,
+      "image": "/img/brownie.webp",
+      "calories": "80 kcal",
+      "rating": 9.7,
+      "isSpecial": true,
+      "status": "active"
+    },
+    {
+      "id": "ITEM_1768837988107",
+      "name": "Oreo_Shake",
+      "categoryId": "CAT_1768653111431",
+      "ingredients": "chocolate,milk,ice",
+      "description": "super chocolaty shake",
+      "price": 100,
+      "image": "/img/mocha.avif",
+      "calories": "200 kcal",
+      "rating": 9,
+      "isSpecial": true,
+      "status": "active"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORDER_1768927563371",
+      "customerId": "CUSTOMER_1768927435503",
+      "customer": {
+        "name": "JayKumar Khatik",
+        "email": "jaykumarkhatik@gmail.com",
+        "phone": "9879813898"
+      },
+      "shippingAddress": {
+        "address": "ahmedabad",
+        "city": "ahmedabad",
+        "state": "gujarat",
+        "zip": "258963",
+        "country": "India"
+      },
+      "payment": {
+        "method": "upi",
+        "status": "Pending"
+      },
+      "items": [
+        {
+          "menuItemId": "ITEM_1768653218644",
+          "name": "Cold Brew",
+          "price": 199,
+          "quantity": 4
+        },
+        {
+          "menuItemId": "ITEM_1768837988107",
+          "name": "Oreo_Shake",
+          "price": 100,
+          "quantity": 3
+        }
+      ],
+      "totalAmount": 1086,
+      "status": "pending",
+      "date": "2026-01-20"
+    },
+    {
+      "id": "ORDER_1768927719661",
+      "customerId": "CUSTOMER_1768927435503",
+      "customer": {
+        "name": "JayKumar Khatik",
+        "email": "jaykumarkhatik@gmail.com",
+        "phone": "9879813898"
+      },
+      "shippingAddress": {
+        "address": "nsbvnbv",
+        "city": "sbns",
+        "state": "nsbvns",
+        "zip": "445544",
+        "country": "India"
+      },
+      "payment": {
+        "method": "cod",
+        "status": "Pending"
+      },
+      "items": [
+        {
+          "menuItemId": "ITEM_1768653218644",
+          "name": "Cold Brew",
+          "price": 199,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 189,
+      "status": "pending",
+      "date": "2026-01-20"
+    },
+    {
+      "id": "ORDER_1768967577097",
+      "customerId": "CUSTOMER_1768967532990",
+      "customer": {
+        "name": "Harsha Bhaviskar",
+        "email": "Harsha@gmail.com",
+        "phone": "7897897897"
+      },
+      "shippingAddress": {
+        "address": "Nirantchokdi",
+        "city": "Ahmedabad",
+        "state": "Gujarat",
+        "zip": "382419",
+        "country": "India"
+      },
+      "payment": {
+        "method": "cod",
+        "status": "Pending"
+      },
+      "items": [
+        {
+          "menuItemId": "ITEM_1768653218644",
+          "name": "Cold Brew",
+          "price": 199,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 189,
+      "status": "pending",
+      "date": "2026-01-21"
+    },
+    {
+      "id": "ORDER_1768979947325",
+      "customerId": "CUSTOMER_1768927435503",
+      "customer": {
+        "name": "JayKumar Khatik",
+        "email": "jaykumarkhatik@gmail.com",
+        "phone": "9879813898"
+      },
+      "shippingAddress": {
+        "address": "jwdbjwvd",
+        "city": "jdwjbg",
+        "state": "vvvv",
+        "zip": "123456",
+        "country": "India"
+      },
+      "payment": {
+        "method": "cod",
+        "status": "Pending"
+      },
+      "items": [
+        {
+          "menuItemId": "ITEM_1768653218644",
+          "name": "Cold Brew",
+          "price": 199,
+          "quantity": 9
+        },
+        {
+          "menuItemId": "ITEM_1768837988107",
+          "name": "Oreo_Shake",
+          "price": 100,
+          "quantity": 3
+        }
+      ],
+      "totalAmount": 2081,
+      "status": "pending",
+      "date": "2026-01-21"
+    },
+    {
+      "id": "ORDER_1769155233706",
+      "customerId": "CUSTOMER_1768927435503",
+      "customer": {
+        "name": "JayKumar Khatik",
+        "email": "jaykumarkhatik@gmail.com",
+        "phone": "9879813898"
+      },
+      "shippingAddress": {
+        "address": "jdb",
+        "city": "dmb",
+        "state": "kd ",
+        "zip": "dkn",
+        "country": "India"
+      },
+      "payment": {
+        "method": "cod",
+        "status": "Pending"
+      },
+      "items": [
+        {
+          "menuItemId": "ITEM_1768653218644",
+          "name": "Cold Brew",
+          "price": 199,
+          "quantity": 19
+        }
+      ],
+      "totalAmount": 3771,
+      "status": "pending",
+      "date": "2026-01-23"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "1",
+      "item": "Coffee Beans (Arabica)",
+      "category": "Raw Materials",
+      "supplier": "Bean Co.",
+      "currentStock": "15 kg",
+      "maxStock": "50 kg",
+      "stockPercentage": 30,
+      "lastRestock": "2024-01-10"
+    },
+    {
+      "id": "2",
+      "item": "Milk (Whole)",
+      "category": "Dairy",
+      "supplier": "DairyFresh",
+      "currentStock": "25 L",
+      "maxStock": "50 L",
+      "stockPercentage": 50,
+      "lastRestock": "2024-01-14"
+    },
+    {
+      "id": "3",
+      "item": "Chocolate Syrup",
+      "category": "Flavoring",
+      "supplier": "ChocoWorld",
+      "currentStock": "3 L",
+      "maxStock": "15 L",
+      "stockPercentage": 20,
+      "lastRestock": "2024-01-05"
+    },
+    {
+      "id": "4",
+      "item": "Fresh Cream",
+      "category": "Dairy",
+      "supplier": "DairyFresh",
+      "currentStock": "12 L",
+      "maxStock": "25 L",
+      "stockPercentage": 48,
+      "lastRestock": "2024-01-15"
+    },
+    {
+      "id": "5",
+      "item": "Sugar (Brown)",
+      "category": "Raw Materials",
+      "supplier": "SweetCo",
+      "currentStock": "60 kg",
+      "maxStock": "80 kg",
+      "stockPercentage": 75,
+      "lastRestock": "2024-01-12"
+    },
+    {
+      "id": "6",
+      "item": "Tea Leaves (Assam)",
+      "category": "Raw Materials",
+      "supplier": "TeaWorld",
+      "currentStock": "5 kg",
+      "maxStock": "40 kg",
+      "stockPercentage": 12,
+      "lastRestock": "2024-01-08"
+    },
+    {
+      "id": "7",
+      "item": "Vanilla Essence",
+      "category": "Flavoring",
+      "supplier": "FlavorMax",
+      "currentStock": "10 ml",
+      "maxStock": "30 ml",
+      "stockPercentage": 33,
+      "lastRestock": "2024-01-09"
+    },
+    {
+      "id": "8",
+      "item": "Paper Cups (250ml)",
+      "category": "Supplies",
+      "supplier": "EcoCups",
+      "currentStock": "180 pcs",
+      "maxStock": "300 pcs",
+      "stockPercentage": 60,
+      "lastRestock": "2024-01-11"
+    },
+    {
+      "id": "9",
+      "item": "Strawberry Syrup",
+      "category": "Flavoring",
+      "supplier": "ChocoWorld",
+      "currentStock": "8 L",
+      "maxStock": "20 L",
+      "stockPercentage": 40,
+      "lastRestock": "2024-01-13"
+    },
+    {
+      "id": "10",
+      "item": "Espresso Cups",
+      "category": "Supplies",
+      "supplier": "EcoCups",
+      "currentStock": "120 pcs",
+      "maxStock": "200 pcs",
+      "stockPercentage": 60,
+      "lastRestock": "2024-01-10"
+    },
+    {
+      "id": "11",
+      "item": "Whipped Cream",
+      "category": "Dairy",
+      "supplier": "DairyFresh",
+      "currentStock": "6 L",
+      "maxStock": "15 L",
+      "stockPercentage": 40,
+      "lastRestock": "2024-01-14"
+    }
+  ],
+  "categories": [
+    {
+      "id": "CAT_1768653111431",
+      "name": "Chocolate_Drinks",
+      "icon": "bi-cup-hot-fill",
+      "color": "bg-coffee"
+    }
+  ],
+  "offers": [
+    {
+      "id": "OFFER_1768733849404",
+      "code": "JAY30",
+      "discount": "30%",
+      "minOrder": "$200",
+      "maxUsage": "2",
+      "used": 0,
+      "validFrom": "2026-01-22",
+      "validTo": "2026-01-23",
+      "status": "active"
+    },
+    {
+      "id": "OFFER_1768733949005",
+      "code": "RAHUL10",
+      "discount": "10%",
+      "minOrder": "$100",
+      "maxUsage": "4",
+      "used": 0,
+      "validFrom": "2026-01-31",
+      "validTo": "2026-02-01",
+      "status": "active"
+    }
+  ],
+  "reservations": [
+    {
+      "name": "John Doe",
+      "phone": "+1 234 567 890",
+      "date": "2024-01-16",
+      "time": "7:00 PM",
+      "guests": 4,
+      "table": "T-5",
+      "status": "confirmed",
+      "id": "bbcd"
+    },
+    {
+      "name": "Jane Smith",
+      "phone": "+1 234 567 891",
+      "date": "2024-01-16",
+      "time": "8:00 PM",
+      "guests": 2,
+      "table": "T-2",
+      "status": "pending",
+      "id": "b295"
+    },
+    {
+      "name": "Sarah Wilson",
+      "phone": "+1 234 567 893",
+      "date": "2024-01-16",
+      "time": "7:30 PM",
+      "guests": 3,
+      "table": "T-3",
+      "status": "cancelled",
+      "id": "5990"
+    }
+  ],
+  "employees": [
+    {
+      "id": "1",
+      "name": "Mia Roberts",
+      "initials": "MR",
+      "role": "Head Chef",
+      "email": "mia@cafehouse.com",
+      "phone": "+1 987 564 321",
+      "shift": "Morning",
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "name": "John Carter",
+      "initials": "JC",
+      "role": "Cashier",
+      "email": "john@cafehouse.com",
+      "phone": "+1 785 223 452",
+      "shift": "Evening",
+      "status": "on-leave"
+    },
+    {
+      "id": "2e5d",
+      "name": "Rakesh",
+      "initials": "RK",
+      "role": "Cleaner",
+      "email": "rakesh21@gmail.com",
+      "phone": "7897897897",
+      "shift": "Evening",
+      "status": "on-leave"
+    }
+  ],
+  "customers": [
+    {
+      "id": "CUSTOMER_1768927435503",
+      "name": "JayKumar Khatik",
+      "initials": "J",
+      "email": "jaykumarkhatik@gmail.com",
+      "phone": "9879813898",
+      "password": "190504",
+      "loyalty": "Bronze",
+      "totalSpent": 7127,
+      "orderCount": 4,
+      "status": "Active",
+      "registered": "2026-01-20T16:43:55.503Z",
+      "lastVisit": "2026-01-23"
+    },
+    {
+      "id": "CUSTOMER_1768967532990",
+      "name": "Harsha Bhaviskar",
+      "initials": "H",
+      "email": "Harsha@gmail.com",
+      "phone": "7897897897",
+      "password": "200124",
+      "loyalty": "Bronze",
+      "totalSpent": 189,
+      "orderCount": 1,
+      "status": "Active",
+      "registered": "2026-01-21T03:52:12.990Z",
+      "lastVisit": "2026-01-21"
+    }
+  ]
+}
