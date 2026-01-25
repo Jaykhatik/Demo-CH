@@ -30,7 +30,7 @@ function Offers() {
   // Fetch offers from API
   const fetchOffers = async () => {
     try {
-      const res = await axios.get("http://localhost:3002/offers");
+      const res = await axios.get("https://demo-ch-production.up.railway.app/offers");
       setOffers(res.data);
     } catch (err) {
       console.error("Error fetching offers:", err);
@@ -54,12 +54,12 @@ function Offers() {
       if (showEditModal && selectedOffer?.id) {
         // Edit offer
         await axios.patch(
-          `http://localhost:3002/offers/${selectedOffer.id}`,
+          `https://demo-ch-production.up.railway.app/offers/${selectedOffer.id}`,
           offerForm
         );
       } else {
         // Add new offer with proper ID format
-        await axios.post("http://localhost:3002/offers", {
+        await axios.post("https://demo-ch-production.up.railway.app/offers", {
           ...offerForm,
           id: `OFFER_${Date.now()}`,
           used: 0
@@ -78,7 +78,7 @@ function Offers() {
   const handleDeleteOffer = async () => {
     try {
       if (!selectedOffer?.id) return;
-      await axios.delete(`http://localhost:3002/offers/${selectedOffer.id}`);
+      await axios.delete(`https://demo-ch-production.up.railway.app/offers/${selectedOffer.id}`);
       await fetchOffers();
       setShowDeleteModal(false);
     } catch (err) {

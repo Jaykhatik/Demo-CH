@@ -29,13 +29,13 @@ function Profile() {
     }
     // Fetch customer
     axios
-      .get(`http://localhost:3002/customers/${customerId}`)
+      .get(`https://demo-ch-production.up.railway.app/customers/${customerId}`)
       .then((res) => setCustomer(res.data))
       .catch(() => navigate("/authentication", { replace: true }));
 
     // Fetch orders
     axios
-      .get("http://localhost:3002/orders")
+      .get("https://demo-ch-production.up.railway.app/orders")
       .then((res) => {
         const userOrders = res.data.filter(
           (o) => o.customerId === customerId

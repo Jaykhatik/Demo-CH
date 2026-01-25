@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 
 /* ================= BASE URL ================= */
-const BASE_URL = "http://localhost:3002";
+const BASE_URL = "https://demo-ch-production.up.railway.app";
 
 const CafeAuth = () => {
   const [isLogin, setIsLogin] = useState(true);

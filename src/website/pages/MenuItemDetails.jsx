@@ -13,7 +13,7 @@ function MenuItemDetails() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3002/menuItems/${id}`)
+      .get(`https://demo-ch-production.up.railway.app/menuItems/${id}`)
       .then(res => setItem(res.data))
       .catch(err => console.error(err));
   }, [id]);
@@ -38,13 +38,13 @@ function MenuItemDetails() {
             <h1 className="detail-title">{item.name}</h1>
 
             <p className="detail-description">
-  {item.description || "Delicious handcrafted item made fresh for you."}
-</p>
+              {item.description || "Delicious handcrafted item made fresh for you."}
+            </p>
 
             <div className="detail-meta">
-  <span>⭐ {item.rating || "4.5"}</span>
-  <span>{item.calories || "250 kcal"}</span>
-</div>
+              <span>⭐ {item.rating || "4.5"}</span>
+              <span>{item.calories || "250 kcal"}</span>
+            </div>
 
             <p className="detail-ingredients">
               <b>Ingredients:</b> {item.ingredients}
@@ -54,8 +54,8 @@ function MenuItemDetails() {
               <b>Available Sizes</b>
               <div className="size-list">
                 {Array.isArray(item.size) && item.size.map((s, i) => (
-  <span key={i} className="size-badge">{s}</span>
-))}
+                  <span key={i} className="size-badge">{s}</span>
+                ))}
 
               </div>
             </div>
