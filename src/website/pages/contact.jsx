@@ -1,3 +1,4 @@
+import { Link } from 'lucide-react'
 import React from 'react'
 
 function Contact() {
@@ -29,7 +30,7 @@ function Contact() {
                                 Drop us a message and we’ll get back to you shortly.
                             </p>
 
-                            <a href="#main" className="tm-more-button tm-more-button-welcome">Message Us</a>
+                            <Link to="/messageus" className="tm-more-button tm-more-button-welcome">Message Us</Link>
                         </div>
 
                         <img src="img/table-set.png" alt="Table Set" className="tm-table-set img-responsive" />

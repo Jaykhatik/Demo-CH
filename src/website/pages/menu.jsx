@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { useCart } from "../../context/cartcontext";
 import { useWishlist } from "../../context/WhishlistContext";
+import { Link } from "lucide-react";
 
 
 
@@ -94,9 +95,9 @@ function Menu() {
                                 Explore our freshly brewed coffees, delicious desserts, refreshing beverages, and handcrafted snacks.
                             </p>
 
-                            <a href="#main" className="tm-more-button tm-more-button-welcome">
+                            <Link to="/main" className="tm-more-button tm-more-button-welcome">
                                 Explore Menu
-                            </a>
+                            </Link>
                         </div>
 
                         <img
@@ -128,8 +129,8 @@ function Menu() {
                                             <ul>
                                                 {categories.map((cat) => (
                                                     <li key={cat.id}>
-                                                        <a
-                                                            href="#"
+                                                        <Link
+                                                            to="/catid"
                                                             className={String(activeCategoryId) === String(cat.id) ? "active" : ""}
                                                             onClick={(e) => {
                                                                 e.preventDefault();
@@ -137,7 +138,7 @@ function Menu() {
                                                             }}
                                                         >
                                                             {cat.name}
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -200,10 +201,10 @@ function Menu() {
 
                                                 </div>
                                                 <div className="tm-product-price-menupage">
-                                                    <a href="#" className="tm-product-price-link-menupage">
+                                                    <Link to="/price" className="tm-product-price-link-menupage">
                                                         <span className="tm-product-price-currency-menupage">$</span>
                                                         {item.price}
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         ))

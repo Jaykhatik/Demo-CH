@@ -1,3 +1,4 @@
+import { Link } from "lucide-react";
 import React from "react";
 
 function About() {
@@ -25,9 +26,9 @@ function About() {
                             Learn more about our journey, values, and what makes <span className="gold-text">Cafe House</span> special.
                         </p>
 
-                        <a href="#main" className="tm-more-button tm-more-button-welcome">
+                        <Link to="/more" className="tm-more-button tm-more-button-welcome">
                             Explore More
-                        </a>
+                        </Link>
                     </div>
 
                     <img

@@ -1,3 +1,4 @@
+import { Link } from 'lucide-react'
 import React from 'react'
 
 function Footer() {
@@ -14,11 +15,11 @@ function Footer() {
                             <nav className="col-lg-3 col-md-3 tm-footer-nav tm-footer-div">
                                 <h3 className="tm-footer-div-title">Quick Links</h3>
                                 <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Our Menu</a></li>
-                                    <li><a href="#">Specials</a></li>
-                                    <li><a href="#">Gallery</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><Link to="/">Home</Link></li>
+                                    <li><Link to="/menu">Our Menu</Link></li>
+                                    <li><Link to="/specals">Specials</Link></li>
+                                    <li><Link to="/gallery">Gallery</Link></li>
+                                    <li><Link to="/contact">Contact Us</Link></li>
                                 </ul>
                             </nav>
 
@@ -49,11 +50,11 @@ function Footer() {
                                 <p>Follow us on social media to stay updated on offers, events & new arrivals.</p>
 
                                 <div className="tm-social-icons-container">
-                                    <a href="#" className="tm-social-icon"><i className="fa fa-facebook" /></a>
-                                    <a href="#" className="tm-social-icon"><i className="fa fa-instagram" /></a>
-                                    <a href="#" className="tm-social-icon"><i className="fa fa-twitter" /></a>
-                                    <a href="#" className="tm-social-icon"><i className="fa fa-youtube" /></a>
-                                    <a href="#" className="tm-social-icon"><i className="fa fa-map-marker" /></a>
+                                    <Link to="/facebook" className="tm-social-icon"><i className="fa fa-facebook" /></Link>
+                                    <Link to="/insta" className="tm-social-icon"><i className="fa fa-instagram" /></Link>
+                                    <Link to="/twitter" className="tm-social-icon"><i className="fa fa-twitter" /></Link>
+                                    <Link to="/youtube" className="tm-social-icon"><i className="fa fa-youtube" /></Link>
+                                    <Link to="/marker" className="tm-social-icon"><i className="fa fa-map-marker" /></Link>
                                 </div>
                             </div>
 

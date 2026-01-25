@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
+import { Link } from 'lucide-react';
 
 function Index() {
     const [popularItems, setPopularItems] = useState([]);
@@ -56,9 +57,9 @@ function Index() {
                                 cozy ambience, and handcrafted flavors come together.
                             </p>
 
-                            <a href="#main" className="tm-more-button tm-more-button-welcome">
+                            <Link to="/main" className="tm-more-button tm-more-button-welcome">
                                 Explore More
-                            </a>
+                            </Link>
                         </div>
 
                         <img src="img/table-set.png" alt="Table Set" className="tm-table-set img-responsive" />
