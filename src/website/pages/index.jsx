@@ -13,7 +13,7 @@ function Index() {
     useEffect(() => {
         const fetchPopularItems = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/menuItems");
+                const response = await axios.get("https://demo-ch.onrender.com/menuItems");
                 const specialItems = response.data.filter(item => item.isSpecial === true);
                 setPopularItems(specialItems);
             } catch (error) {

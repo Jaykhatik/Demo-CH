@@ -13,7 +13,7 @@ function MenuItemDetails() {
 
   useEffect(() => {
     axios
-      .get(`https://demo-ch-production.up.railway.app/menuItems/${id}`)
+      .get(`https://demo-ch.onrender.com/menuItems/${id}`)
       .then(res => setItem(res.data))
       .catch(err => console.error(err));
   }, [id]);

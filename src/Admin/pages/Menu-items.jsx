@@ -32,14 +32,14 @@ const MenuItems = () => {
 
   // -------- FETCH MENU ITEMS --------
   useEffect(() => {
-    axios.get("http://localhost:3000/menuItems")
+    axios.get("https://demo-ch.onrender.com/menuItems")
       .then(res => setMenuData(res.data))
       .catch(err => console.error(err));
   }, []);
 
   // -------- FETCH CATEGORIES --------
   useEffect(() => {
-    axios.get("http://localhost:3000/categories")
+    axios.get("https://demo-ch.onrender.com/categories")
       .then(res => setCategories(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -86,7 +86,7 @@ const MenuItems = () => {
   const handleUpdateItem = async () => {
     try {
       await axios.put(
-        `http://localhost:3000/menuItems/${editItem.id}`,
+        `https://demo-ch.onrender.com/menuItems/${editItem.id}`,
         editItem
       );
 
@@ -111,7 +111,7 @@ const MenuItems = () => {
   const handleConfirmDelete = async () => {
     try {
       await axios.delete(
-        `http://localhost:3000/menuItems/${deleteItem.id}`
+        `https://demo-ch.onrender.com/menuItems/${deleteItem.id}`
       );
 
       // remove from UI
@@ -171,7 +171,7 @@ const MenuItems = () => {
       };
 
       const res = await axios.post(
-        "http://localhost:3000/menuItems",
+        "https://demo-ch.onrender.com/menuItems",
         payload
       );
 

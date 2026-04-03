@@ -29,13 +29,13 @@ function Profile() {
     }
     // Fetch customer
     axios
-      .get(`http://localhost:3000/customers/${customerId}`)
+      .get(`https://demo-ch.onrender.com/customers/${customerId}`)
       .then((res) => setCustomer(res.data))
       .catch(() => navigate("/authentication", { replace: true }));
 
     // Fetch orders
     axios
-      .get("http://localhost:3000/orders")
+      .get("https://demo-ch.onrender.com/orders")
       .then((res) => {
         const userOrders = res.data.filter(
           (o) => o.customerId === customerId

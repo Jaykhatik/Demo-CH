@@ -17,9 +17,9 @@ function Orders() {
     const fetchData = async () => {
       try {
         const [ordersRes, customersRes, menuRes] = await Promise.all([
-          axios.get("http://localhost:3000/orders"),
-          axios.get("http://localhost:3000/customers"),
-          axios.get("http://localhost:3000/menuItems"),
+          axios.get("https://demo-ch.onrender.com/orders"),
+          axios.get("https://demo-ch.onrender.com/customers"),
+          axios.get("https://demo-ch.onrender.com/menuItems"),
         ]);
 
         setOrders(ordersRes.data);
@@ -251,11 +251,11 @@ function Orders() {
                     onClick={async () => {
                       try {
                         await axios.patch(
-                          `http://localhost:3000/orders/${selectedOrder.id}`,
+                          `https://demo-ch.onrender.com/orders/${selectedOrder.id}`,
                           { status: selectedOrder.status }
                         );
                         // refresh orders
-                        const res = await axios.get("http://localhost:3000/orders");
+                        const res = await axios.get("https://demo-ch.onrender.com/orders");
                         setOrders(res.data);
                         setModalOpen(false);
                       } catch (err) {

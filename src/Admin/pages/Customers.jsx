@@ -13,7 +13,7 @@ const Customers = () => {
   // ================= FETCH CUSTOMERS =================
   const fetchCustomers = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/customers");
+      const res = await axios.get("https://demo-ch.onrender.com/customers");
       setCustomers(res.data);
     } catch (err) {
       console.error("Error fetching customers:", err);
@@ -23,7 +23,7 @@ const Customers = () => {
   // ================= FETCH ORDERS =================
   const fetchOrders = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/orders");
+      const res = await axios.get("https://demo-ch.onrender.com/orders");
       setOrders(res.data);
     } catch (err) {
       console.error("Error fetching orders:", err);
@@ -212,7 +212,7 @@ const Customers = () => {
                       onClick={async () => {
                         try {
                           await axios.patch(
-                            `https://demo-ch-production.up.railway.app/customers/${selectedCustomer.id}`,
+                            `https://demo-ch.onrender.com/customers/${selectedCustomer.id}`,
                             { loyalty: selectedCustomer.loyalty }
                           );
                           fetchCustomers(); // refresh the table

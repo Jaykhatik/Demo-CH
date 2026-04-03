@@ -22,8 +22,8 @@ function Menu() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const catRes = await axios.get("http://localhost:3000/categories");
-                const menuRes = await axios.get("http://localhost:3000/menuItems");
+                const catRes = await axios.get("https://demo-ch.onrender.com/categories");
+                const menuRes = await axios.get("https://demo-ch.onrender.com/menuItems");
 
                 setCategories(catRes.data);
                 setMenuItems(menuRes.data);

@@ -21,7 +21,7 @@ function Categories() {
   // ===================== FETCH CATEGORIES =====================
   const fetchCategories = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/categories");
+      const res = await axios.get("https://demo-ch.onrender.com/categories");
       setCategories(res.data);
     } catch (err) {
       console.error("Error fetching categories:", err);
@@ -31,7 +31,7 @@ function Categories() {
   // ===================== FETCH MENU ITEMS =====================
   const fetchMenuItems = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/menuItems");
+      const res = await axios.get("https://demo-ch.onrender.com/menuItems");
       setMenuItems(res.data);
     } catch (err) {
       console.error("Error fetching menu items:", err);
@@ -93,12 +93,12 @@ function Categories() {
       if (editingCategory) {
         // EDIT
         await axios.put(
-          `http://localhost:3000/categories/${editingCategory.id}`,
+          `https://demo-ch.onrender.com/categories/${editingCategory.id}`,
           newCategory
         );
       } else {
         // ADD
-        await axios.post("http://localhost:3000/categories", newCategory);
+        await axios.post("https://demo-ch.onrender.com/categories", newCategory);
       }
 
       setShowAddModal(false);
@@ -123,11 +123,11 @@ function Categories() {
       );
 
       for (let item of itemsToDelete) {
-        await axios.delete(`http://localhost:3000/menuItems/${item.id}`);
+        await axios.delete(`https://demo-ch.onrender.com/menuItems/${item.id}`);
       }
 
       // 2️⃣ Delete the category
-      await axios.delete(`http://localhost:3000/categories/${deleteCategory.id}`);
+      await axios.delete(`https://demo-ch.onrender.com/categories/${deleteCategory.id}`);
 
       // Update UI
       setCategories(prev => prev.filter(cat => cat.id !== deleteCategory.id));

@@ -36,7 +36,7 @@ function Checkout() {
     if (!loggedCustomerId) return;
 
     axios
-      .get(`http://localhost:3000/customers/${loggedCustomerId}`)
+      .get(`https://demo-ch.onrender.com/customers/${loggedCustomerId}`)
       .then((res) => {
         setCustomer({
           name: res.data.name,
@@ -68,7 +68,7 @@ function Checkout() {
   // ===== SAVE CUSTOMER =====
   const saveCustomer = async () => {
     // 1️⃣ Check existing customer by email
-    const res = await axios.get("http://localhost:3000/customers");
+    const res = await axios.get("https://demo-ch.onrender.com/customers");
     const existing = res.data.find(
       (c) => c.email.toLowerCase() === customer.email.toLowerCase()
     );
@@ -94,7 +94,7 @@ function Checkout() {
       lastVisit: new Date().toISOString().split("T")[0],
     };
 
-    await axios.post("http://localhost:3000/customers", newCustomer);
+    await axios.post("https://demo-ch.onrender.com/customers", newCustomer);
 
     return customerId;
   };
@@ -105,7 +105,7 @@ function Checkout() {
     const rawId = Date.now().toString();
     const orderId = `ORDER_${rawId}`;
 
-    const res = await axios.post("http://localhost:3000/orders", {
+    const res = await axios.post("https://demo-ch.onrender.com/orders", {
       id: orderId,
       customerId,
       customer: {
@@ -140,7 +140,7 @@ function Checkout() {
 
   // ===== FIND EXISTING CUSTOMER =====
   const findExistingCustomer = async (email) => {
-    const res = await axios.get("http://localhost:3000/customers");
+    const res = await axios.get("https://demo-ch.onrender.com/customers");
     return res.data.find((c) => c.email.toLowerCase() === email.toLowerCase());
   };
 
@@ -171,11 +171,11 @@ function Checkout() {
       const savedOrderId = await saveOrder(savedCustomerId);
       // ✅ UPDATE CUSTOMER STATS
       const customerRes = await axios.get(
-        `http://localhost:3000/customers/${savedCustomerId}`
+        `https://demo-ch.onrender.com/customers/${savedCustomerId}`
       );
 
       await axios.patch(
-        `http://localhost:3000/customers/${savedCustomerId}`,
+        `https://demo-ch.onrender.com/customers/${savedCustomerId}`,
         {
           totalSpent: (customerRes.data.totalSpent || 0) + total,
           orderCount: (customerRes.data.orderCount || 0) + 1,

@@ -28,7 +28,7 @@ const AdminLogin = () => {
 
         try {
             const { data: admin } = await axios.get(
-                "http://localhost:3000/admin"
+                "https://demo-ch.onrender.com/admin"
             );
 
             if (

@@ -19,10 +19,10 @@ function Dashboard() {
       try {
         const [ordersRes, customersRes, inventoryRes, menuRes] =
           await Promise.all([
-            axios.get("http://localhost:3000/orders"),
-            axios.get("http://localhost:3000/customers"),
-            axios.get("http://localhost:3000/inventory"),
-            axios.get("http://localhost:3000/menuItems"),
+            axios.get("https://demo-ch.onrender.com/orders"),
+            axios.get("https://demo-ch.onrender.com/customers"),
+            axios.get("https://demo-ch.onrender.com/inventory"),
+            axios.get("https://demo-ch.onrender.com/menuItems"),
           ]);
 
         setOrders(ordersRes.data);
