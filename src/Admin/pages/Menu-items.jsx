@@ -32,14 +32,14 @@ const MenuItems = () => {
 
   // -------- FETCH MENU ITEMS --------
   useEffect(() => {
-    axios.get("https://demo-ch-production.up.railway.app/menuItems")
+    axios.get("http://localhost:3000/menuItems")
       .then(res => setMenuData(res.data))
       .catch(err => console.error(err));
   }, []);
 
   // -------- FETCH CATEGORIES --------
   useEffect(() => {
-    axios.get("https://demo-ch-production.up.railway.app/categories")
+    axios.get("http://localhost:3000/categories")
       .then(res => setCategories(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -86,7 +86,7 @@ const MenuItems = () => {
   const handleUpdateItem = async () => {
     try {
       await axios.put(
-        `https://demo-ch-production.up.railway.app/menuItems/${editItem.id}`,
+        `http://localhost:3000/menuItems/${editItem.id}`,
         editItem
       );
 
@@ -111,7 +111,7 @@ const MenuItems = () => {
   const handleConfirmDelete = async () => {
     try {
       await axios.delete(
-        `https://demo-ch-production.up.railway.app/menuItems/${deleteItem.id}`
+        `http://localhost:3000/menuItems/${deleteItem.id}`
       );
 
       // remove from UI
@@ -171,7 +171,7 @@ const MenuItems = () => {
       };
 
       const res = await axios.post(
-        "https://demo-ch-production.up.railway.app/menuItems",
+        "http://localhost:3000/menuItems",
         payload
       );
 

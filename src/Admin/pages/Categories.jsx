@@ -21,7 +21,7 @@ function Categories() {
   // ===================== FETCH CATEGORIES =====================
   const fetchCategories = async () => {
     try {
-      const res = await axios.get("https://demo-ch-production.up.railway.app/categories");
+      const res = await axios.get("http://localhost:3000/categories");
       setCategories(res.data);
     } catch (err) {
       console.error("Error fetching categories:", err);
@@ -31,7 +31,7 @@ function Categories() {
   // ===================== FETCH MENU ITEMS =====================
   const fetchMenuItems = async () => {
     try {
-      const res = await axios.get("https://demo-ch-production.up.railway.app/menuItems");
+      const res = await axios.get("http://localhost:3000/menuItems");
       setMenuItems(res.data);
     } catch (err) {
       console.error("Error fetching menu items:", err);
@@ -93,12 +93,12 @@ function Categories() {
       if (editingCategory) {
         // EDIT
         await axios.put(
-          `https://demo-ch-production.up.railway.app/categories/${editingCategory.id}`,
+          `http://localhost:3000/categories/${editingCategory.id}`,
           newCategory
         );
       } else {
         // ADD
-        await axios.post("https://demo-ch-production.up.railway.app/categories", newCategory);
+        await axios.post("http://localhost:3000/categories", newCategory);
       }
 
       setShowAddModal(false);
@@ -123,11 +123,11 @@ function Categories() {
       );
 
       for (let item of itemsToDelete) {
-        await axios.delete(`https://demo-ch-production.up.railway.app/menuItems/${item.id}`);
+        await axios.delete(`http://localhost:3000/menuItems/${item.id}`);
       }
 
       // 2️⃣ Delete the category
-      await axios.delete(`https://demo-ch-production.up.railway.app/categories/${deleteCategory.id}`);
+      await axios.delete(`http://localhost:3000/categories/${deleteCategory.id}`);
 
       // Update UI
       setCategories(prev => prev.filter(cat => cat.id !== deleteCategory.id));

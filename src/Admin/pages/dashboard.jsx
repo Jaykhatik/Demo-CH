@@ -19,10 +19,10 @@ function Dashboard() {
       try {
         const [ordersRes, customersRes, inventoryRes, menuRes] =
           await Promise.all([
-            axios.get("https://demo-ch-production.up.railway.app/orders"),
-            axios.get("https://demo-ch-production.up.railway.app/customers"),
-            axios.get("https://demo-ch-production.up.railway.app/inventory"),
-            axios.get("https://demo-ch-production.up.railway.app/menuItems"),
+            axios.get("http://localhost:3000/orders"),
+            axios.get("http://localhost:3000/customers"),
+            axios.get("http://localhost:3000/inventory"),
+            axios.get("http://localhost:3000/menuItems"),
           ]);
 
         setOrders(ordersRes.data);

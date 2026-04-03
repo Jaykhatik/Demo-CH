@@ -28,7 +28,7 @@ const AdminLogin = () => {
 
         try {
             const { data: admin } = await axios.get(
-                "https://demo-ch-production.up.railway.app/admin"
+                "http://localhost:3000/admin"
             );
 
             if (

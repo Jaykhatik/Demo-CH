@@ -43,7 +43,7 @@ function Reservations() {
   useEffect(() => {
     const fetchReservations = async () => {
       try {
-        const response = await axios.get("https://demo-ch-production.up.railway.app/reservations"); // replace with your API URL
+        const response = await axios.get("http://localhost:3000/reservations"); // replace with your API URL
         setReservations(response.data);
       } catch (error) {
         console.error("Error fetching reservations:", error);
@@ -66,7 +66,7 @@ function Reservations() {
 
         {/* TOP CARDS */}
         <div className="row g-3 mb-4">
-          {[ 
+          {[
             { title: "Today's Reservations", value: reservations.length },
             { title: "Pending", value: reservations.filter(r => r.status === "pending").length, cls: "pending-res" },
             { title: "Confirmed", value: reservations.filter(r => r.status === "confirmed").length, cls: "confirmed-res" },
@@ -147,8 +147,8 @@ function Reservations() {
                           key={idx}
                           className={
                             day === today.getDate() &&
-                            currentMonth === today.getMonth() &&
-                            currentYear === today.getFullYear()
+                              currentMonth === today.getMonth() &&
+                              currentYear === today.getFullYear()
                               ? "calendar-date active-date"
                               : "calendar-date"
                           }

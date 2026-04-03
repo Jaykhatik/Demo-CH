@@ -13,7 +13,7 @@ const Customers = () => {
   // ================= FETCH CUSTOMERS =================
   const fetchCustomers = async () => {
     try {
-      const res = await axios.get("https://demo-ch-production.up.railway.app/customers");
+      const res = await axios.get("http://localhost:3000/customers");
       setCustomers(res.data);
     } catch (err) {
       console.error("Error fetching customers:", err);
@@ -23,7 +23,7 @@ const Customers = () => {
   // ================= FETCH ORDERS =================
   const fetchOrders = async () => {
     try {
-      const res = await axios.get("https://demo-ch-production.up.railway.app/orders");
+      const res = await axios.get("http://localhost:3000/orders");
       setOrders(res.data);
     } catch (err) {
       console.error("Error fetching orders:", err);

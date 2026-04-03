@@ -33,7 +33,7 @@ function EmployeePage() {
   // Same simple function style as your other pages
   const fetch_data = async () => {
     try {
-      const response = await axios.get("https://demo-ch-production.up.railway.app/employees");
+      const response = await axios.get("http://localhost:3000/employees");
       setEmployees(response.data); // store API data
     } catch (error) {
       console.error("Error fetching employees:", error);
@@ -80,7 +80,7 @@ function EmployeePage() {
       if (editingEmployee) {
         // EDIT
         const res = await axios.put(
-          `https://demo-ch-production.up.railway.app/employees/${editingEmployee.id}`,
+          `http://localhost:3000/employees/${editingEmployee.id}`,
           empForm
         );
         setEmployees(prev =>
@@ -89,7 +89,7 @@ function EmployeePage() {
       } else {
         // ADD
         const res = await axios.post(
-          `https://demo-ch-production.up.railway.app/employees`,
+          `http://localhost:3000/employees`,
           empForm
         );
         setEmployees(prev => [...prev, res.data]);
@@ -103,7 +103,7 @@ function EmployeePage() {
   };
   const handleConfirmDelete = async () => {
     try {
-      await axios.delete(`https://demo-ch-production.up.railway.app/employees/${deleteEmployee.id}`);
+      await axios.delete(`http://localhost:3000/employees/${deleteEmployee.id}`);
       setEmployees(prev => prev.filter(emp => emp.id !== deleteEmployee.id));
       setShowDeleteModal(false);
       setDeleteEmployee(null);

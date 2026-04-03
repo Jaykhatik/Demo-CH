@@ -11,11 +11,11 @@ function OrderDetail() {
 
     useEffect(() => {
         // Fetch menu items
-        axios.get("https://demo-ch-production.up.railway.app/menuItems").then((res) => setMenuItems(res.data));
+        axios.get("http://localhost:3000/menuItems").then((res) => setMenuItems(res.data));
 
         // Fetch orders
         axios
-            .get("https://demo-ch-production.up.railway.app/orders")
+            .get("http://localhost:3000/orders")
             .then((res) => {
                 const foundOrder = res.data.find((o) => o.id === orderId);
                 if (!foundOrder) {
